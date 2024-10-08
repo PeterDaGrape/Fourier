@@ -1,0 +1,24 @@
+{
+  "originHash" : "9197795d252289a86f6759b6d6911e309d98b11882160bc33c9912ae4f00a0d7",
+  "pins" : [
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics.git",
+      "state" : {
+        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "swiftsdl2",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ctreffs/SwiftSDL2.git",
+      "state" : {
+        "revision" : "30a2886bd68e43fc19ba29b63ffe230ac0e4db7a",
+        "version" : "1.4.1"
+      }
+    }
+  ],
+  "version" : 3
+}

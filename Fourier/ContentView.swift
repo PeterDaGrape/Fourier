@@ -6,17 +6,40 @@
 //
 
 import SwiftUI
+import SDL2
+import Cocoa
 
 struct ContentView: View {
+    
+    
+    @State var numberCircles: Double = 100
+    
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+
+                        
+            VStack {
+                Text("number of circles: \(String(numberCircles))")
+                Slider(value: ($numberCircles), in: 1 ... 200, step: 1)
+                    
+            }
+            .onAppear() {
+                DispatchQueue.main.async {
+                    openSDLWindow(numberWaves: $numberCircles)
+                }
+            }
+            
+
+            
+          
+
         }
+      
         .padding()
+        
     }
+        
 }
 
 #Preview {

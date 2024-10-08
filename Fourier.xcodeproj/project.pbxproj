@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		944D5D522CAB610C009A48C1 /* ComplexModule in Frameworks */ = {isa = PBXBuildFile; productRef = 944D5D512CAB610C009A48C1 /* ComplexModule */; };
+		944D5D542CAB610C009A48C1 /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = 944D5D532CAB610C009A48C1 /* Numerics */; };
+		944D5D562CAB610C009A48C1 /* RealModule in Frameworks */ = {isa = PBXBuildFile; productRef = 944D5D552CAB610C009A48C1 /* RealModule */; };
+		94F4F0A72CAAF0A60080C946 /* SDL in Frameworks */ = {isa = PBXBuildFile; productRef = 94F4F0A62CAAF0A60080C946 /* SDL */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		94F4F0732CAAEE270080C946 /* Fourier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fourier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +30,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944D5D562CAB610C009A48C1 /* RealModule in Frameworks */,
+				94F4F0A72CAAF0A60080C946 /* SDL in Frameworks */,
+				944D5D542CAB610C009A48C1 /* Numerics in Frameworks */,
+				944D5D522CAB610C009A48C1 /* ComplexModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +76,10 @@
 			);
 			name = Fourier;
 			packageProductDependencies = (
+				94F4F0A62CAAF0A60080C946 /* SDL */,
+				944D5D512CAB610C009A48C1 /* ComplexModule */,
+				944D5D532CAB610C009A48C1 /* Numerics */,
+				944D5D552CAB610C009A48C1 /* RealModule */,
 			);
 			productName = Fourier;
 			productReference = 94F4F0732CAAEE270080C946 /* Fourier.app */;
@@ -94,6 +109,10 @@
 			);
 			mainGroup = 94F4F06A2CAAEE270080C946;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				94F4F0A52CAAF0A60080C946 /* XCRemoteSwiftPackageReference "SwiftSDL2" */,
+				944D5D502CAB610C009A48C1 /* XCRemoteSwiftPackageReference "swift-numerics" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 94F4F0742CAAEE270080C946 /* Products */;
 			projectDirPath = "";
@@ -319,6 +338,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		944D5D502CAB610C009A48C1 /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-numerics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		94F4F0A52CAAF0A60080C946 /* XCRemoteSwiftPackageReference "SwiftSDL2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ctreffs/SwiftSDL2.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		944D5D512CAB610C009A48C1 /* ComplexModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 944D5D502CAB610C009A48C1 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = ComplexModule;
+		};
+		944D5D532CAB610C009A48C1 /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 944D5D502CAB610C009A48C1 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
+		};
+		944D5D552CAB610C009A48C1 /* RealModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 944D5D502CAB610C009A48C1 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = RealModule;
+		};
+		94F4F0A62CAAF0A60080C946 /* SDL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94F4F0A52CAAF0A60080C946 /* XCRemoteSwiftPackageReference "SwiftSDL2" */;
+			productName = SDL;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94F4F06B2CAAEE270080C946 /* Project object */;
 }
