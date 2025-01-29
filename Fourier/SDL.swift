@@ -79,6 +79,7 @@ func openSDLWindow(numberWaves: Binding<Double>) {
         w, h,
         UInt32(SDL_WINDOW_SHOWN.rawValue)
     )
+
     
     // Create a renderer associated with the window
     let renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED.rawValue)
@@ -190,7 +191,6 @@ func openSDLWindow(numberWaves: Binding<Double>) {
             
             if numberWaves.wrappedValue < Double(waves.count) {
                 
-                
                 reducedWaves = Array(waves[0 ..< Int(numberWaves.wrappedValue)])
                 
             }
@@ -214,9 +214,6 @@ func openSDLWindow(numberWaves: Binding<Double>) {
                 SDL_RenderDrawLine(renderer, w / 2 + Int32(prevPoint.real * Double(w)), h / 2 + Int32(prevPoint.imaginary * Double(h)), w / 2 + Int32(offset.real * Double(w)), h / 2 + Int32(offset.imaginary * Double(h)))
 
             }
-            
-            SDL_RenderDrawPoint(renderer, w / 2 + Int32(offset.real * Double(w)), h / 2 + Int32(offset.imaginary * Double(h)))
-            
             
             
             SDL_Delay(10)
